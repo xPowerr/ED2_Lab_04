@@ -33,16 +33,22 @@
 [v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
 "32
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
+[v i1_I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
 "39
 [v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+[v i1_I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
 "47
 [v _I2C_Master_RepeatedStart I2C_Master_RepeatedStart `(v  1 e 1 0 ]
 "55
 [v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
+[v i1_I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
 "65
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
+[v i1_I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
 "74
 [v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]
+"11 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\IOCB.c
+[v _ioc_init ioc_init `(v  1 e 1 0 ]
 "13 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\LCD.c
 [v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
 "55
@@ -57,27 +63,48 @@
 [v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
 "103
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
-"52 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
+"55 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
 [v _map map `(i  1 e 2 0 ]
-"63
+"72
 [v _main main `(v  1 e 1 0 ]
-"107
+"170
 [v _isr isr `II(v  1 e 1 0 ]
-"112
+"386
 [v _setup setup `(v  1 e 1 0 ]
-"162
+"442
 [v _Read Read `(uc  1 e 1 0 ]
-"175
+"456
 [v _Read_Time Read_Time `(v  1 e 1 0 ]
-"181
+"463
 [v _Read_Date Read_Date `(v  1 e 1 0 ]
-"203
+"470
+[v _Set_sec Set_sec `(v  1 e 1 0 ]
+[v i1_Set_sec Set_sec `(v  1 e 1 0 ]
+"479
+[v _Set_min Set_min `(v  1 e 1 0 ]
+[v i1_Set_min Set_min `(v  1 e 1 0 ]
+"488
+[v _Set_hour Set_hour `(v  1 e 1 0 ]
+[v i1_Set_hour Set_hour `(v  1 e 1 0 ]
+"497
+[v _Set_day Set_day `(v  1 e 1 0 ]
+[v i1_Set_day Set_day `(v  1 e 1 0 ]
+"506
+[v _Set_month Set_month `(v  1 e 1 0 ]
+[v i1_Set_month Set_month `(v  1 e 1 0 ]
+"515
+[v _Set_year Set_year `(v  1 e 1 0 ]
+[v i1_Set_year Set_year `(v  1 e 1 0 ]
+"524
+[v _Dec_to_Bcd Dec_to_Bcd `(uc  1 e 1 0 ]
+[v i1_Dec_to_Bcd Dec_to_Bcd `(uc  1 e 1 0 ]
+"541
 [v _Bcd_to_Dec Bcd_to_Dec `(uc  1 e 1 0 ]
 "167 C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "229
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S299 . 1 `uc 1 RB0 1 0 :1:0 
+[s S151 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -87,13 +114,13 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "246
-[u S308 . 1 `S299 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES308  1 e 1 @6 ]
+[u S160 . 1 `S151 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES160  1 e 1 @6 ]
 "291
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
 "353
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S278 . 1 `uc 1 RD0 1 0 :1:0 
+[s S442 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -103,17 +130,58 @@
 `uc 1 RD7 1 0 :1:7 
 ]
 "370
-[u S287 . 1 `S278 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES287  1 e 1 @8 ]
+[u S451 . 1 `S442 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES451  1 e 1 @8 ]
 "415
 [v _PORTE PORTE `VEuc  1 e 1 @9 ]
+[s S119 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"483
+[s S128 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S133 . 1 `S119 1 . 1 0 `S128 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES133  1 e 1 @11 ]
 "844
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "851
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-"1479
-[v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S199 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S525 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"1367
+[s S532 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S536 . 1 `S525 1 . 1 0 `S532 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES536  1 e 1 @129 ]
+[s S174 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1496
+[u S183 . 1 `S174 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES183  1 e 1 @134 ]
+[s S363 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -123,27 +191,27 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1558
-[u S208 . 1 `S199 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES208  1 e 1 @135 ]
+[u S372 . 1 `S363 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES372  1 e 1 @135 ]
 "1603
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-[s S98 . 1 `uc 1 SCS 1 0 :1:0 
+[s S206 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1883
-[s S104 . 1 `uc 1 . 1 0 :4:0 
+[s S212 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S109 . 1 `S98 1 . 1 0 `S104 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES109  1 e 1 @143 ]
+[u S217 . 1 `S206 1 . 1 0 `S212 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES217  1 e 1 @143 ]
 "1980
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
-[s S220 . 1 `uc 1 SEN 1 0 :1:0 
+[s S384 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -153,12 +221,40 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "1997
-[u S229 . 1 `S220 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES229  1 e 1 @145 ]
+[u S393 . 1 `S384 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES393  1 e 1 @145 ]
 "2049
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2178
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S551 . 1 `uc 1 WPUB 1 0 :8:0 
+]
+"2367
+[s S553 . 1 `uc 1 WPUB0 1 0 :1:0 
+`uc 1 WPUB1 1 0 :1:1 
+`uc 1 WPUB2 1 0 :1:2 
+`uc 1 WPUB3 1 0 :1:3 
+`uc 1 WPUB4 1 0 :1:4 
+`uc 1 WPUB5 1 0 :1:5 
+`uc 1 WPUB6 1 0 :1:6 
+`uc 1 WPUB7 1 0 :1:7 
+]
+[u S562 . 1 `S551 1 . 1 0 `S553 1 . 1 0 ]
+[v _WPUBbits WPUBbits `VES562  1 e 1 @149 ]
+[s S577 . 1 `uc 1 IOCB 1 0 :8:0 
+]
+"2437
+[s S579 . 1 `uc 1 IOCB0 1 0 :1:0 
+`uc 1 IOCB1 1 0 :1:1 
+`uc 1 IOCB2 1 0 :1:2 
+`uc 1 IOCB3 1 0 :1:3 
+`uc 1 IOCB4 1 0 :1:4 
+`uc 1 IOCB5 1 0 :1:5 
+`uc 1 IOCB6 1 0 :1:6 
+`uc 1 IOCB7 1 0 :1:7 
+]
+[u S588 . 1 `S577 1 . 1 0 `S579 1 . 1 0 ]
+[v _IOCBbits IOCBbits `VES588  1 e 1 @150 ]
 "3388
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3450
@@ -177,56 +273,60 @@
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
 "358 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
-"37 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
-[v _voltaje1 voltaje1 `uc  1 e 1 0 ]
-"38
-[v _vol1 vol1 `i  1 e 2 0 ]
+"38 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
+[v _selector selector `uc  1 e 1 0 ]
 "39
-[v _unidad1 unidad1 `ui  1 e 2 0 ]
+[v _bandera bandera `uc  1 e 1 0 ]
 "40
-[v _decima1 decima1 `ui  1 e 2 0 ]
+[v _voltaje1 voltaje1 `uc  1 e 1 0 ]
 "41
-[v _centesima1 centesima1 `ui  1 e 2 0 ]
+[v _vol1 vol1 `i  1 e 2 0 ]
 "42
-[v _buffer buffer `[20]uc  1 e 20 0 ]
+[v _unidad1 unidad1 `ui  1 e 2 0 ]
 "43
-[v _segundo segundo `uc  1 e 1 0 ]
+[v _decima1 decima1 `ui  1 e 2 0 ]
 "44
-[v _minuto minuto `uc  1 e 1 0 ]
+[v _centesima1 centesima1 `ui  1 e 2 0 ]
 "45
-[v _hora hora `uc  1 e 1 0 ]
+[v _buffer buffer `[20]uc  1 e 20 0 ]
 "46
-[v _dia dia `uc  1 e 1 0 ]
+[v _segundo segundo `uc  1 e 1 0 ]
 "47
-[v _mes mes `uc  1 e 1 0 ]
+[v _minuto minuto `uc  1 e 1 0 ]
 "48
+[v _hora hora `uc  1 e 1 0 ]
+"49
+[v _dia dia `uc  1 e 1 0 ]
+"50
+[v _mes mes `uc  1 e 1 0 ]
+"51
 [v _ano ano `uc  1 e 1 0 ]
-"63
+"72
 [v _main main `(v  1 e 1 0 ]
 {
-"104
+"167
 } 0
 "505 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
 "514
-[v sprintf@width width `i  1 a 2 19 ]
+[v sprintf@width width `i  1 a 2 29 ]
 "545
-[v sprintf@val val `ui  1 a 2 16 ]
+[v sprintf@val val `ui  1 a 2 26 ]
 "512
-[v sprintf@c c `uc  1 a 1 22 ]
+[v sprintf@c c `uc  1 a 1 31 ]
 "525
-[v sprintf@flag flag `uc  1 a 1 18 ]
+[v sprintf@flag flag `uc  1 a 1 28 ]
 "507
-[v sprintf@ap ap `[1]*.4v  1 a 1 15 ]
+[v sprintf@ap ap `[1]*.4v  1 a 1 25 ]
 "521
-[v sprintf@prec prec `c  1 a 1 14 ]
+[v sprintf@prec prec `c  1 a 1 24 ]
 "505
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-[v sprintf@f f `*.24DCuc  1 p 1 4 ]
+[v sprintf@f f `*.24DCuc  1 p 1 14 ]
 "550
-[v sprintf@sp sp `*.4uc  1 a 1 21 ]
+[v sprintf@sp sp `*.4uc  1 a 1 32 ]
 "1567
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\isdigit.c
@@ -235,130 +335,198 @@
 [v isdigit@c c `uc  1 a 1 wreg ]
 [v isdigit@c c `uc  1 a 1 wreg ]
 "14
-[v isdigit@c c `uc  1 a 1 3 ]
+[v isdigit@c c `uc  1 a 1 1 ]
 "15
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
 {
 "10
-[v ___lwmod@counter counter `uc  1 a 1 11 ]
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
 "5
-[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
-[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
 "25
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "10
-[v ___lwdiv@quotient quotient `ui  1 a 2 7 ]
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
 "11
-[v ___lwdiv@counter counter `uc  1 a 1 9 ]
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
 "5
-[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
-[v ___lwdiv@dividend dividend `ui  1 p 2 4 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "30
 } 0
-"112 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
+"386 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"157
+"437
+} 0
+"11 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\IOCB.c
+[v _ioc_init ioc_init `(v  1 e 1 0 ]
+{
+[v ioc_init@pin pin `uc  1 a 1 wreg ]
+[v ioc_init@pin pin `uc  1 a 1 wreg ]
+[v ioc_init@pin pin `uc  1 a 1 0 ]
+"48
 } 0
 "16 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\I2C.c
 [v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
 {
-[v I2C_Master_Init@c c `DCul  1 p 4 5 ]
+[v I2C_Master_Init@c c `DCul  1 p 4 14 ]
 "24
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
 {
 "10
-[v ___lldiv@quotient quotient `ul  1 a 4 0 ]
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
 "11
-[v ___lldiv@counter counter `uc  1 a 1 4 ]
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
 "5
-[v ___lldiv@divisor divisor `ul  1 p 4 2 ]
-[v ___lldiv@dividend dividend `ul  1 p 4 6 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"52 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
+"55 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
 [v _map map `(i  1 e 2 0 ]
 {
 [v map@value value `uc  1 a 1 wreg ]
 [v map@value value `uc  1 a 1 wreg ]
-[v map@inputmin inputmin `i  1 p 2 5 ]
-[v map@inputmax inputmax `i  1 p 2 7 ]
-[v map@outmin outmin `i  1 p 2 9 ]
-[v map@outmax outmax `i  1 p 2 11 ]
-[v map@value value `uc  1 a 1 14 ]
-"53
+[v map@inputmin inputmin `i  1 p 2 15 ]
+[v map@inputmax inputmax `i  1 p 2 17 ]
+[v map@outmin outmin `i  1 p 2 19 ]
+[v map@outmax outmax `i  1 p 2 21 ]
+[v map@value value `uc  1 a 1 24 ]
+"56
 } 0
 "15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "17
-[v ___wmul@product product `ui  1 a 2 6 ]
+[v ___wmul@product product `ui  1 a 2 4 ]
 "15
-[v ___wmul@multiplier multiplier `ui  1 p 2 2 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 4 ]
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "10
-[v ___awdiv@quotient quotient `i  1 a 2 3 ]
+[v ___awdiv@quotient quotient `i  1 a 2 13 ]
 "11
-[v ___awdiv@sign sign `uc  1 a 1 2 ]
-[v ___awdiv@counter counter `uc  1 a 1 1 ]
+[v ___awdiv@sign sign `uc  1 a 1 12 ]
+[v ___awdiv@counter counter `uc  1 a 1 11 ]
 "5
-[v ___awdiv@divisor divisor `i  1 p 2 8 ]
-[v ___awdiv@dividend dividend `i  1 p 2 10 ]
+[v ___awdiv@divisor divisor `i  1 p 2 6 ]
+[v ___awdiv@dividend dividend `i  1 p 2 8 ]
 "41
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v ___awmod@sign sign `uc  1 a 1 11 ]
-[v ___awmod@counter counter `uc  1 a 1 10 ]
+[v ___awmod@sign sign `uc  1 a 1 21 ]
+[v ___awmod@counter counter `uc  1 a 1 20 ]
 "5
-[v ___awmod@divisor divisor `i  1 p 2 5 ]
-[v ___awmod@dividend dividend `i  1 p 2 7 ]
+[v ___awmod@divisor divisor `i  1 p 2 15 ]
+[v ___awmod@dividend dividend `i  1 p 2 17 ]
 "34
 } 0
-"175 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
+"515 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
+[v _Set_year Set_year `(v  1 e 1 0 ]
+{
+[v Set_year@year year `uc  1 a 1 wreg ]
+[v Set_year@year year `uc  1 a 1 wreg ]
+[v Set_year@year year `uc  1 a 1 6 ]
+"521
+} 0
+"470
+[v _Set_sec Set_sec `(v  1 e 1 0 ]
+{
+[v Set_sec@sec sec `uc  1 a 1 wreg ]
+[v Set_sec@sec sec `uc  1 a 1 wreg ]
+[v Set_sec@sec sec `uc  1 a 1 6 ]
+"476
+} 0
+"506
+[v _Set_month Set_month `(v  1 e 1 0 ]
+{
+[v Set_month@month month `uc  1 a 1 wreg ]
+[v Set_month@month month `uc  1 a 1 wreg ]
+[v Set_month@month month `uc  1 a 1 6 ]
+"512
+} 0
+"479
+[v _Set_min Set_min `(v  1 e 1 0 ]
+{
+[v Set_min@min min `uc  1 a 1 wreg ]
+[v Set_min@min min `uc  1 a 1 wreg ]
+[v Set_min@min min `uc  1 a 1 6 ]
+"485
+} 0
+"488
+[v _Set_hour Set_hour `(v  1 e 1 0 ]
+{
+[v Set_hour@hour hour `uc  1 a 1 wreg ]
+[v Set_hour@hour hour `uc  1 a 1 wreg ]
+[v Set_hour@hour hour `uc  1 a 1 6 ]
+"494
+} 0
+"497
+[v _Set_day Set_day `(v  1 e 1 0 ]
+{
+[v Set_day@day day `uc  1 a 1 wreg ]
+[v Set_day@day day `uc  1 a 1 wreg ]
+[v Set_day@day day `uc  1 a 1 6 ]
+"503
+} 0
+"524
+[v _Dec_to_Bcd Dec_to_Bcd `(uc  1 e 1 0 ]
+{
+[v Dec_to_Bcd@dec_number dec_number `uc  1 a 1 wreg ]
+"525
+[v Dec_to_Bcd@bcd_number bcd_number `uc  1 a 1 1 ]
+"524
+[v Dec_to_Bcd@dec_number dec_number `uc  1 a 1 wreg ]
+"526
+[v Dec_to_Bcd@dec_number dec_number `uc  1 a 1 0 ]
+"538
+} 0
+"456
 [v _Read_Time Read_Time `(v  1 e 1 0 ]
 {
 [v Read_Time@s s `*.4uc  1 a 1 wreg ]
 [v Read_Time@s s `*.4uc  1 a 1 wreg ]
-[v Read_Time@m m `*.4uc  1 p 1 0 ]
-[v Read_Time@h h `*.4uc  1 p 1 1 ]
-[v Read_Time@s s `*.4uc  1 a 1 2 ]
-"179
+[v Read_Time@m m `*.4uc  1 p 1 10 ]
+[v Read_Time@h h `*.4uc  1 p 1 11 ]
+[v Read_Time@s s `*.4uc  1 a 1 12 ]
+"460
 } 0
-"181
+"463
 [v _Read_Date Read_Date `(v  1 e 1 0 ]
 {
 [v Read_Date@d d `*.4uc  1 a 1 wreg ]
 [v Read_Date@d d `*.4uc  1 a 1 wreg ]
-[v Read_Date@month month `*.4uc  1 p 1 0 ]
-[v Read_Date@y y `*.4uc  1 p 1 1 ]
-[v Read_Date@d d `*.4uc  1 a 1 2 ]
-"185
+[v Read_Date@month month `*.4uc  1 p 1 10 ]
+[v Read_Date@y y `*.4uc  1 p 1 11 ]
+[v Read_Date@d d `*.4uc  1 a 1 12 ]
+"467
 } 0
-"162
+"442
 [v _Read Read `(uc  1 e 1 0 ]
 {
 [v Read@address address `uc  1 a 1 wreg ]
-"163
-[v Read@dato dato `uc  1 a 1 11 ]
-"162
+"443
+[v Read@dato dato `uc  1 a 1 9 ]
+"442
 [v Read@address address `uc  1 a 1 wreg ]
-[v Read@address address `uc  1 a 1 10 ]
-"173
+[v Read@address address `uc  1 a 1 8 ]
+"453
 } 0
 "65 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\I2C.c
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
@@ -385,9 +553,9 @@
 [v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]
 {
 "76
-[v I2C_Master_Read@temp temp `us  1 a 2 6 ]
+[v I2C_Master_Read@temp temp `us  1 a 2 4 ]
 "74
-[v I2C_Master_Read@a a `us  1 p 2 2 ]
+[v I2C_Master_Read@a a `us  1 p 2 0 ]
 "89
 } 0
 "32
@@ -395,38 +563,38 @@
 {
 "35
 } 0
-"203 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
+"541 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
 [v _Bcd_to_Dec Bcd_to_Dec `(uc  1 e 1 0 ]
 {
 [v Bcd_to_Dec@bcd bcd `uc  1 a 1 wreg ]
-"204
-[v Bcd_to_Dec@dec dec `uc  1 a 1 8 ]
-"203
+"542
+[v Bcd_to_Dec@dec dec `uc  1 a 1 6 ]
+"541
 [v Bcd_to_Dec@bcd bcd `uc  1 a 1 wreg ]
-"205
-[v Bcd_to_Dec@bcd bcd `uc  1 a 1 9 ]
-"207
+"543
+[v Bcd_to_Dec@bcd bcd `uc  1 a 1 7 ]
+"545
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul8.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
 {
 [v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
 "6
-[v ___bmul@product product `uc  1 a 1 4 ]
+[v ___bmul@product product `uc  1 a 1 2 ]
 "4
 [v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
-[v ___bmul@multiplicand multiplicand `uc  1 p 1 2 ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
 "6
-[v ___bmul@multiplier multiplier `uc  1 a 1 5 ]
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
 "51
 } 0
 "103 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\LCD.c
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
 {
 "104
-[v Lcd_Write_String@i i `i  1 a 2 10 ]
+[v Lcd_Write_String@i i `i  1 a 2 8 ]
 "103
-[v Lcd_Write_String@a a `*.26uc  1 p 2 5 ]
+[v Lcd_Write_String@a a `*.26uc  1 p 2 3 ]
 "107
 } 0
 "95
@@ -434,7 +602,7 @@
 {
 [v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
 [v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
-[v Lcd_Write_Char@a a `uc  1 a 1 4 ]
+[v Lcd_Write_Char@a a `uc  1 a 1 2 ]
 "101
 } 0
 "68
@@ -442,12 +610,12 @@
 {
 [v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
 "69
-[v Lcd_Set_Cursor@temp temp `uc  1 a 1 8 ]
+[v Lcd_Set_Cursor@temp temp `uc  1 a 1 6 ]
 "68
 [v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
-[v Lcd_Set_Cursor@b b `uc  1 p 1 6 ]
+[v Lcd_Set_Cursor@b b `uc  1 p 1 4 ]
 "70
-[v Lcd_Set_Cursor@a a `uc  1 a 1 7 ]
+[v Lcd_Set_Cursor@a a `uc  1 a 1 5 ]
 "77
 } 0
 "79
@@ -465,7 +633,7 @@
 {
 [v Lcd_Cmd@a a `uc  1 a 1 wreg ]
 [v Lcd_Cmd@a a `uc  1 a 1 wreg ]
-[v Lcd_Cmd@a a `uc  1 a 1 5 ]
+[v Lcd_Cmd@a a `uc  1 a 1 3 ]
 "61
 } 0
 "13
@@ -473,11 +641,92 @@
 {
 [v Lcd_Port@a a `uc  1 a 1 wreg ]
 [v Lcd_Port@a a `uc  1 a 1 wreg ]
-[v Lcd_Port@a a `uc  1 a 1 2 ]
+[v Lcd_Port@a a `uc  1 a 1 0 ]
 "53
 } 0
-"107 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
+"170 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"109
+"383
+} 0
+"515
+[v i1_Set_year Set_year `(v  1 e 1 0 ]
+{
+[v i1Set_year@year year `uc  1 a 1 wreg ]
+[v i1Set_year@year year `uc  1 a 1 wreg ]
+[v i1Set_year@year year `uc  1 a 1 6 ]
+"521
+} 0
+"470
+[v i1_Set_sec Set_sec `(v  1 e 1 0 ]
+{
+[v i1Set_sec@sec sec `uc  1 a 1 wreg ]
+[v i1Set_sec@sec sec `uc  1 a 1 wreg ]
+[v i1Set_sec@sec sec `uc  1 a 1 6 ]
+"476
+} 0
+"506
+[v i1_Set_month Set_month `(v  1 e 1 0 ]
+{
+[v i1Set_month@month month `uc  1 a 1 wreg ]
+[v i1Set_month@month month `uc  1 a 1 wreg ]
+[v i1Set_month@month month `uc  1 a 1 6 ]
+"512
+} 0
+"479
+[v i1_Set_min Set_min `(v  1 e 1 0 ]
+{
+[v i1Set_min@min min `uc  1 a 1 wreg ]
+[v i1Set_min@min min `uc  1 a 1 wreg ]
+[v i1Set_min@min min `uc  1 a 1 6 ]
+"485
+} 0
+"488
+[v i1_Set_hour Set_hour `(v  1 e 1 0 ]
+{
+[v i1Set_hour@hour hour `uc  1 a 1 wreg ]
+[v i1Set_hour@hour hour `uc  1 a 1 wreg ]
+[v i1Set_hour@hour hour `uc  1 a 1 6 ]
+"494
+} 0
+"497
+[v i1_Set_day Set_day `(v  1 e 1 0 ]
+{
+[v i1Set_day@day day `uc  1 a 1 wreg ]
+[v i1Set_day@day day `uc  1 a 1 wreg ]
+[v i1Set_day@day day `uc  1 a 1 6 ]
+"503
+} 0
+"65 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\I2C.c
+[v i1_I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
+{
+[v i1I2C_Master_Write@d d `ui  1 p 2 2 ]
+"69
+} 0
+"55
+[v i1_I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
+{
+"59
+} 0
+"39
+[v i1_I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+{
+"43
+} 0
+"32
+[v i1_I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
+{
+"35
+} 0
+"524 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Master.X\main.c
+[v i1_Dec_to_Bcd Dec_to_Bcd `(uc  1 e 1 0 ]
+{
+[v i1Dec_to_Bcd@dec_number dec_number `uc  1 a 1 wreg ]
+"525
+[v i1Dec_to_Bcd@bcd_number bcd_number `uc  1 a 1 1 ]
+"524
+[v i1Dec_to_Bcd@dec_number dec_number `uc  1 a 1 wreg ]
+"526
+[v i1Dec_to_Bcd@dec_number dec_number `uc  1 a 1 0 ]
+"538
 } 0

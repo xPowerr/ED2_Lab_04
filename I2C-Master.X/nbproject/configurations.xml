@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>I2C.h</itemPath>
       <itemPath>LCD.h</itemPath>
+      <itemPath>IOCB.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -17,6 +18,7 @@
       <itemPath>main.c</itemPath>
       <itemPath>I2C.c</itemPath>
       <itemPath>LCD.c</itemPath>
+      <itemPath>IOCB.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
