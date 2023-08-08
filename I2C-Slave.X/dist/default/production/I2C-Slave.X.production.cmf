@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.o
+$C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 C C 3 2 1
@@ -76,14 +76,14 @@ STRING 30D-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\I2C-Slave.X.production.o
-F cinit CODE >813:C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.s
-F cinit CODE >816:C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.s
-F cinit CODE >833:C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.s
-10 cinit CODE >834:C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.s
-11 cinit CODE >835:C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.s
-12 cinit CODE >841:C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.s
-12 cinit CODE >843:C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.s
-13 cinit CODE >844:C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.s
+F cinit CODE >813:C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.s
+F cinit CODE >816:C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.s
+F cinit CODE >833:C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.s
+10 cinit CODE >834:C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.s
+11 cinit CODE >835:C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.s
+12 cinit CODE >841:C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.s
+12 cinit CODE >843:C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.s
+13 cinit CODE >844:C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.s
 4 intentry CODE >59:C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Slave.X\main.c
 303 text7 CODE >34:C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Slave.X\ADC_setup.c
 303 text7 CODE >35:C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Sexto Semestre\Tareas\Electrónica Digital 2\Labs\ED2_Lab_04\I2C-Slave.X\ADC_setup.c
@@ -278,18 +278,18 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _BF 4A0 0 ABS 0 - dist/default/production\I2C-Slave.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\I2C-Slave.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.o
+___sp 0 0 STACK 2 stack C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.o
 _main 540 0 CODE 0 maintext dist/default/production\I2C-Slave.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\I2C-Slave.X.production.o
-start 18 0 CODE 0 init C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.o
+start 18 0 CODE 0 init C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\I2C-Slave.X.production.o
 adc_init@channel 22 0 BANK0 1 cstackBANK0 dist/default/production\I2C-Slave.X.production.o
@@ -302,8 +302,8 @@ _SSPCONbits 14 0 ABS 0 - dist/default/production\I2C-Slave.X.production.o
 i1adc_change_channel@channel 70 0 COMMON 1 cstackCOMMON dist/default/production\I2C-Slave.X.production.o
 i1_adc_change_channel 21E 0 CODE 0 text6 dist/default/production\I2C-Slave.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.o
-___stacklo 0 0 ABS 0 - C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.o
+___stackhi 0 0 ABS 0 - C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.o
+___stacklo 0 0 ABS 0 - C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.o
 _I2C_Slave_Init 5CE 0 CODE 0 text2 dist/default/production\I2C-Slave.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\I2C-Slave.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\I2C-Slave.X.production.o
@@ -313,7 +313,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\I2C-Slave.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\I2C-Slave.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\I2C-Slave.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\I2C-Slave.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.o
+___int_sp 0 0 STACK 2 stack C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -360,7 +360,7 @@ _isr 410 0 CODE 0 text5 dist/default/production\I2C-Slave.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\I2C-Slave.X.production.o
 __end_of_isr 4F6 0 CODE 0 text5 dist/default/production\I2C-Slave.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Gabriel\AppData\Local\Temp\xcAsqqc.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Gabriel\AppData\Local\Temp\xcAs5i0.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\I2C-Slave.X.production.o
 __pmaintext 540 0 CODE 0 maintext dist/default/production\I2C-Slave.X.production.o
 __Lcommon 0 0 ABS 0 common -

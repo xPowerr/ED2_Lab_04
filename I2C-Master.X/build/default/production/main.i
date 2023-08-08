@@ -2826,11 +2826,23 @@ unsigned int unidad1;
 unsigned int decima1;
 unsigned int centesima1;
 char buffer[20];
+uint8_t segundo;
+uint8_t minuto;
+uint8_t hora;
+uint8_t dia;
+uint8_t mes;
+uint8_t ano;
 
 
 void setup(void);
 int map(unsigned char value, int inputmin, int inputmax, int outmin, int outmax){
     return ((value - inputmin)*(outmax-outmin)) / (inputmax-inputmin)+outmin;}
+
+uint8_t Read(uint8_t address);
+void Read_Time(uint8_t *s, uint8_t *m, uint8_t *h);
+void Read_Date(uint8_t *d, uint8_t *month, uint8_t *y);
+uint8_t Dec_to_Bcd(uint8_t dec_number);
+uint8_t Bcd_to_Dec(uint8_t bcd);
 
 
 
@@ -2864,6 +2876,16 @@ void main(void) {
         Lcd_Set_Cursor(2,1);
         sprintf(buffer, "%d.%d%dV" , unidad1 , decima1 , centesima1 );
         Lcd_Write_String(buffer);
+
+        Read_Time(&segundo, &minuto, &hora);
+        Lcd_Set_Cursor(1,8);
+        sprintf(buffer, "%02u:%02u:%02u" , hora, minuto, segundo);
+        Lcd_Write_String(buffer);
+
+        Read_Date(&dia, &mes, &ano);
+        Lcd_Set_Cursor(2,7);
+        sprintf(buffer, "%02u/%02u/20%02u" , dia, mes, ano);
+        Lcd_Write_String(buffer);
     }
 }
 
@@ -2892,10 +2914,60 @@ void setup(void){
     PORTC = 0;
     PORTD = 0;
     PORTE = 0;
-# 130 "main.c"
+# 152 "main.c"
     OSCCONbits.IRCF = 0b111 ;
     OSCCONbits.SCS = 1;
 
 
     I2C_Master_Init(100000);
+}
+
+
+
+
+uint8_t Read(uint8_t address){
+    uint8_t dato = 0;
+    I2C_Master_Start();
+    I2C_Master_Write(0xD0);
+    I2C_Master_Write(address);
+    I2C_Master_RepeatedStart();
+    I2C_Master_Write(0xD1);
+    dato = I2C_Master_Read(0);
+    I2C_Master_Stop();
+    _delay((unsigned long)((10)*(8000000/4000000.0)));
+    return dato;
+}
+
+void Read_Time(uint8_t *s, uint8_t *m, uint8_t *h){
+    *s = Bcd_to_Dec(Read(0x00));
+    *m = Bcd_to_Dec(Read(0x01));
+    *h = Bcd_to_Dec(Read(0x02));
+}
+
+void Read_Date(uint8_t *d, uint8_t *month, uint8_t *y){
+    *d = Bcd_to_Dec(Read(0x04));
+    *month = Bcd_to_Dec(Read(0x05));
+    *y = Bcd_to_Dec(Read(0x06));
+}
+
+uint8_t Dec_to_Bcd(uint8_t dec_number){
+    uint8_t bcd_number;
+    bcd_number = 0;
+    while(1){
+        if (dec_number >= 10){
+            dec_number = dec_number - 10;
+            bcd_number = bcd_number + 0b00010000;
+        }
+        else {
+            bcd_number = bcd_number + dec_number;
+            break;
+        }
+    }
+    return bcd_number;
+}
+
+uint8_t Bcd_to_Dec(uint8_t bcd){
+    uint8_t dec;
+    dec = ((bcd>>4)*10)+(bcd & 0b00001111);
+    return dec;
 }

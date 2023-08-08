@@ -137,5 +137,5 @@ void setup(void){
     OSCCONbits.SCS = 1; // utilizar oscilador interno
     
     // Inicializacion del i2C con la libreria
-    I2C_Slave_Init(0x50); // Inicializar Comuncación I2C en 100 kHz - ESCLAVO
+    I2C_Slave_Init(0x50); // Inicializar Comuncación I2C en address de 0x50 - ESCLAVO
 }

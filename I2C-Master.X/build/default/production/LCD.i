@@ -2704,7 +2704,7 @@ void Lcd_Cmd(char a) {
     PORTBbits.RB0 = 0;
     Lcd_Port(a);
     PORTBbits.RB1 = 1;
-    _delay((unsigned long)((4)*(4000000/4000.0)));
+    _delay((unsigned long)((4)*(8000000/4000.0)));
     PORTBbits.RB1 = 0;
 }
 
@@ -2726,25 +2726,25 @@ void Lcd_Set_Cursor(char a, char b) {
 
 void Lcd_Init(void) {
     Lcd_Port(0x00);
-    _delay((unsigned long)((20)*(4000000/4000.0)));
+    _delay((unsigned long)((20)*(8000000/4000.0)));
     Lcd_Cmd(0x030);
-    _delay((unsigned long)((5)*(4000000/4000.0)));
+    _delay((unsigned long)((5)*(8000000/4000.0)));
     Lcd_Cmd(0x030);
-    _delay((unsigned long)((200)*(4000000/4000000.0)));
+    _delay((unsigned long)((200)*(8000000/4000000.0)));
     Lcd_Cmd(0x030);
     Lcd_Cmd(0x38);
     Lcd_Cmd(0x08);
     Lcd_Cmd(0x01);
     Lcd_Cmd(0x06);
     Lcd_Cmd(0x0C);
-    _delay((unsigned long)((100)*(4000000/4000000.0)));
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
 }
 
 void Lcd_Write_Char(char a) {
     PORTBbits.RB0 = 1;
     Lcd_Port(a);
     PORTBbits.RB1 = 1;
-    _delay((unsigned long)((40)*(4000000/4000000.0)));
+    _delay((unsigned long)((40)*(8000000/4000000.0)));
     PORTBbits.RB1 = 0;
 }
 
